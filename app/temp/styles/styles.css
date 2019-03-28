@@ -472,5 +472,12 @@ img {
   left: 0;
   width: 100%;
   text-align: center;
+}
 
+.large-hero__title {
+  font-weight: 300;
+}
+
+.large-hero__subtitle {
+  
 }
