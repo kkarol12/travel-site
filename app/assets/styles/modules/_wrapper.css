@@ -1,0 +1,15 @@
+.wrapper {
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1200px;
+  /*ustalam to zeby przy szerokim ekranie tekst nie byl za bardzo rozciągnięty*/
+
+  &--medium {
+    max-width: 976px;
+  }
+
+  .wrapper { /*Kiedy wrapper zagnieżdzony jest w innym dzieki temu nie bedzie dodawane kolejne odbicie - padding */
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
