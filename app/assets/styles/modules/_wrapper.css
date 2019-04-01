@@ -1,8 +1,13 @@
 .wrapper {
+
+  overflow: hidden;
   padding-left: 18px;
   padding-right: 18px;
-  max-width: 1200px;
+  max-width: 1236px;
   /*ustalam to zeby przy szerokim ekranie tekst nie byl za bardzo rozciągnięty*/
+  margin-left: auto;
+  margin-right: auto;
+
 
   &--medium {
     max-width: 976px;
@@ -11,5 +16,13 @@
   .wrapper { /*Kiedy wrapper zagnieżdzony jest w innym dzieki temu nie bedzie dodawane kolejne odbicie - padding */
     padding-left: 0;
     padding-right: 0;
+  }
+
+  &--b-margin{
+    margin-bottom: 1rem;
+
+    @mixin atSmall{
+      margin-bottom: 3.875rem;
+    }
   }
 }

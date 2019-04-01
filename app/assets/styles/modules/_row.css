@@ -1,14 +1,44 @@
 .row {
 
-  @_mixin clearfix;
+  @mixin clearfix;
 
-  &__4 {
-    float: left;
-    width: 33.33%;
+  &--gutters {
+    margin-right: -65px;
   }
 
-  &__8 {
-    float: left;
-    width: 66.66%;
+  &--gutters > div { /*przy takim zapisie edytuje sie wszystkie zagnieżdzone divy jednokrotnie, nie powielając formuły jeśli będą jeden w drugim */
+      padding-right: 65px;
+      /*box sizing: border-box; przeniesiony do globala
+      box-sizing: border-box; /* dzięki temu podany wyzej padding nie bedzie dodany do wyliczenia szerokosci strony przez co suma szerokości z __4 i __8 da 99,99% a nie więcej */
+  }
+
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+  @mixin atMedium {
+
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
+
+    &__medium-4 {
+      float: left;
+      width: 33.33%;
+    }
+
+    &__medium-4--larger{
+      width: 37%;
+    }
+
+    &__medium-8 {
+      float: left;
+      width: 66.66%;
+    }
+
+    &__medium-8--smaller{
+      width: 63%;
+    }
+
   }
 }
